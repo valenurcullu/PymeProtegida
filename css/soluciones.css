@@ -1,0 +1,26 @@
+.communion-circle {
+            position: relative;
+        }
+        .communion-circle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 2rem;
+            height: 2px;
+            background: #c0c7d1;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        .communion-circle:last-child::after {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .communion-circle::after {
+                top: 100%;
+                left: 50%;
+                width: 2px;
+                height: 2rem;
+                transform: translateX(-50%);
+            }
+        }
